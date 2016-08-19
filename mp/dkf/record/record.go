@@ -3,7 +3,7 @@ package record
 
 import (
 	"fmt"
-	"github.com/chanxuehong/wechat.v2/mp/core"
+	"github.com/masiqi/wechat.v2/mp/core"
 )
 
 type Record struct {

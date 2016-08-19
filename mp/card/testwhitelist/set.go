@@ -1,7 +1,7 @@
 package testwhitelist
 
 import (
-	"github.com/chanxuehong/wechat.v2/mp/core"
+	"github.com/masiqi/wechat.v2/mp/core"
 )
 
 type SetParameters struct {

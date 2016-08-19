@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"reflect"
 
-	"github.com/chanxuehong/wechat.v2/internal/debug/api"
-	"github.com/chanxuehong/wechat.v2/internal/debug/api/retry"
-	"github.com/chanxuehong/wechat.v2/json"
+	"github.com/masiqi/wechat.v2/internal/debug/api"
+	"github.com/masiqi/wechat.v2/internal/debug/api/retry"
+	"github.com/masiqi/wechat.v2/json"
 )
 
 type Client struct {

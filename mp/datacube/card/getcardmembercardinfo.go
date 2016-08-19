@@ -1,7 +1,7 @@
 package card
 
 import (
-	"github.com/chanxuehong/wechat.v2/mp/core"
+	"github.com/masiqi/wechat.v2/mp/core"
 )
 
 // 会员卡数据

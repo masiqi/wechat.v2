@@ -1,7 +1,7 @@
 package payutil
 
 import (
-	"github.com/chanxuehong/wechat.v2/mch/core"
+	"github.com/masiqi/wechat.v2/mch/core"
 )
 
 // 测速上报.

@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/chanxuehong/rand"
-	"github.com/chanxuehong/wechat.v2/mch/core"
+	"github.com/masiqi/wechat.v2/mch/core"
 )
 
 // 统一下单.

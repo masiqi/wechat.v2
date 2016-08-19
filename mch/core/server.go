@@ -10,7 +10,7 @@ import (
 
 	"github.com/chanxuehong/util"
 	"github.com/chanxuehong/util/security"
-	"github.com/chanxuehong/wechat.v2/internal/debug/mch/callback"
+	"github.com/masiqi/wechat.v2/internal/debug/mch/callback"
 )
 
 type Server struct {

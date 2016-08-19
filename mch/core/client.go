@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/chanxuehong/util"
-	"github.com/chanxuehong/wechat.v2/internal/debug/mch/api"
+	"github.com/masiqi/wechat.v2/internal/debug/mch/api"
 )
 
 type Client struct {

@@ -9,10 +9,10 @@ import (
 	"os"
 	"unicode"
 
-	"github.com/chanxuehong/wechat.v2/internal/debug/api"
-	"github.com/chanxuehong/wechat.v2/internal/debug/api/retry"
-	"github.com/chanxuehong/wechat.v2/json"
-	"github.com/chanxuehong/wechat.v2/mp/core"
+	"github.com/masiqi/wechat.v2/internal/debug/api"
+	"github.com/masiqi/wechat.v2/internal/debug/api/retry"
+	"github.com/masiqi/wechat.v2/json"
+	"github.com/masiqi/wechat.v2/mp/core"
 )
 
 // Download 下载多媒体到文件.

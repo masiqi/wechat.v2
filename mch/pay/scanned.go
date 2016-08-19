@@ -1,7 +1,7 @@
 package pay
 
 import (
-	"github.com/chanxuehong/wechat.v2/mch/core"
+	"github.com/masiqi/wechat.v2/mch/core"
 )
 
 // 提交刷卡支付.

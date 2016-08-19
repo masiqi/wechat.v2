@@ -1,7 +1,7 @@
 package tools
 
 import (
-	"github.com/chanxuehong/wechat.v2/mch/core"
+	"github.com/masiqi/wechat.v2/mch/core"
 )
 
 // 转换短链接.
