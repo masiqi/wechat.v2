@@ -5,10 +5,11 @@ package callback
 import (
 	"encoding/xml"
 	"io"
-	"net/http"
+
+	"github.com/valyala/fasthttp"
 )
 
-func DebugPrintRequest(r *http.Request) {}
+func DebugPrintRequest(ctx *fasthttp.RequestCtx) {}
 
 func DebugPrintPlainRequestMessage(msg []byte) {}
 

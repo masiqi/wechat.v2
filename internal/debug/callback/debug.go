@@ -6,11 +6,12 @@ import (
 	"encoding/xml"
 	"io"
 	"log"
-	"net/http"
+
+	"github.com/valyala/fasthttp"
 )
 
-func DebugPrintRequest(r *http.Request) {
-	log.Println("[WECHAT_DEBUG] [CALLBACK]", r.Method, r.RequestURI)
+func DebugPrintRequest(ctx *fasthttp.RequestCtx) {
+	log.Println("[WECHAT_DEBUG] [CALLBACK]", ctx.Method(), ctx.RequestURI())
 }
 
 func DebugPrintPlainRequestMessage(msg []byte) {

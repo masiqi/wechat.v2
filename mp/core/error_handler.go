@@ -2,24 +2,25 @@ package core
 
 import (
 	"log"
-	"net/http"
 	"os"
+
+	"github.com/valyala/fasthttp"
 )
 
 type ErrorHandler interface {
-	ServeError(http.ResponseWriter, *http.Request, error)
+	ServeError(*fasthttp.RequestCtx, error)
 }
 
 var DefaultErrorHandler ErrorHandler = ErrorHandlerFunc(defaultErrorHandlerFunc)
 
-type ErrorHandlerFunc func(http.ResponseWriter, *http.Request, error)
+type ErrorHandlerFunc func(*fasthttp.RequestCtx, error)
 
-func (fn ErrorHandlerFunc) ServeError(w http.ResponseWriter, r *http.Request, err error) {
-	fn(w, r, err)
+func (fn ErrorHandlerFunc) ServeError(ctx *fasthttp.RequestCtx, err error) {
+	fn(ctx, err)
 }
 
 var errorLogger = log.New(os.Stderr, "[WECHAT_ERROR] ", log.Ldate|log.Ltime|log.Lmicroseconds|log.Llongfile)
 
-func defaultErrorHandlerFunc(w http.ResponseWriter, r *http.Request, err error) {
+func defaultErrorHandlerFunc(ctx *fasthttp.RequestCtx, err error) {
 	errorLogger.Output(3, err.Error())
 }
