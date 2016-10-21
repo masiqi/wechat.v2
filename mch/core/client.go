@@ -94,16 +94,18 @@ func (clt *Client) PostXML(url string, req map[string]string) (resp map[string]s
 		return
 	}
 
-	// 验证签名
-	signature1, ok := resp["sign"]
-	if !ok {
-		err = ErrNotFoundSign
-		return
-	}
-	signature2 := Sign(resp, clt.apiKey, nil)
-	if signature1 != signature2 {
-		err = fmt.Errorf("sign mismatch,\nhave: %s,\nwant: %s", signature1, signature2)
-		return
-	}
+	// 注释掉验证签名，微信不再返回sign
+	/*
+		signature1, ok := resp["sign"]
+		if !ok {
+			err = ErrNotFoundSign
+			return
+		}
+		signature2 := Sign(resp, clt.apiKey, nil)
+		if signature1 != signature2 {
+			err = fmt.Errorf("sign mismatch,\nhave: %s,\nwant: %s", signature1, signature2)
+			return
+		}
+	*/
 	return
 }
